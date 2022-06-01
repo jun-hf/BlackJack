@@ -22,10 +22,16 @@ class Deck:
                 self.cards.append(new_card)
 
     def shuffle(self):
-        pass
+        shuffle(self.cards)
 
-    def deal(self):
-        pass
+    def deal(self, num_cards):
+        dealt_cards = []
+
+        for i in range(num_cards):
+            top_card = self.cards.pop()
+            dealt_cards.append(top_card)
+
+        return dealt_cards
 
 
 if __name__ == "__main__":

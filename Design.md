@@ -61,3 +61,37 @@
     - str(dunder)
         - return all your str cards in self.cards  
 
+### Game
+- Class Variable
+    - MINIMUM_BET = 1
+- Instance Variable
+    - player
+    - dealer
+    - bet amount
+    - deck
+
+- Initialize 
+    1. player
+    2. dealer
+    3. bet 
+    4. deck
+
+
+- Instance Method
+    - place_bet
+        - Use a while loop to keep prompting the users
+        - Ask player to place the bet
+        - Check if the player's balance 
+        - Check for minimum bet also
+        - if everything is fine, minus the player's balance and update the self.bet
+
+    - get_player_hit_or_stay
+    - deal_starting_cards
+    - player_turn
+    - dealer_turn
+    - handle_blackjack
+    - reset_round
+    - determine_winner
+    - confirm_start
+    - start_round
+    - start_game

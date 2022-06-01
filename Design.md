@@ -44,3 +44,20 @@
     - create -> create a full deck 
 
     - deal(num_cards) -> with num_cards it will throw out the amount of cards from the top of the deck
+
+- __init__
+    - create self.cards = [] to store your card
+    - call create
+    - call shuffle
+
+### Hand
+- Instance Variable
+    - cards -> array of class Card
+
+- Instance Method
+    - get_value -> is an method that return all your value in your cards [array]instance
+    - add -> allows you to add card to self.card
+    
+    - str(dunder)
+        - return all your str cards in self.cards  
+

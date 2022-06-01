@@ -1,12 +1,15 @@
+import re
+
+
 class Card:
-    suit = {
+    SUIT = {
         0 : u"\u2666", # diamonds
         1 : u"\u2665", # hearts
         2 : u"\u2663", # clubs
         3 : u"\u2660" # spades
     }
 
-    card_value = {
+    CARD_VALUE = {
         1 : "A",
         2 : "2",
         3 : "3",
@@ -30,5 +33,8 @@ class Card:
     def __str__(self):
         if self.hidden:
             return "Unknown"
-        
-        return f'{self.suit[self.suit]}{self.card_value[self.value]}'
+
+        return f'{self.SUIT[self.suit]}{self.CARD_VALUE[self.value]}'
+
+if __name__ == "__main__":
+    pass

@@ -35,6 +35,9 @@ class Game:
             print("Invalid respond hit or stay")
 
         return hit_or_stay == "hit"
+    
+    def deal_starting_cards(self):
+        pass
 
 
 if __name__ == "__main__":

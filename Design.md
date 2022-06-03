@@ -92,6 +92,7 @@
         - respond input not valid if the respond is not (hit or stay)
         - return true if the respond is hit
     - deal_starting_cards
+        - 
     - player_turn
     - dealer_turn
     - handle_blackjack

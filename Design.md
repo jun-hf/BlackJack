@@ -85,7 +85,12 @@
         - Check for minimum bet also
         - if everything is fine, minus the player's balance and update the self.bet
 
-    - get_player_hit_or_stay
+    - get_player_hit_or_stay (true if player want to hit)
+        - while loop to keep asking player
+        - ask players if they want to hit or not
+        - break the while loop if the respond is hit or stay
+        - respond input not valid if the respond is not (hit or stay)
+        - return true if the respond is hit
     - deal_starting_cards
     - player_turn
     - dealer_turn

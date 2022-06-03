@@ -24,7 +24,17 @@ class Game:
                 self.bet = bet
                 self.player.balance -= bet
                 break
+    
+    def get_player_hit_or_stay(self):
+        while True:
+            hit_or_stay = input("Do you want to hit or stay?: ").lower()
 
+            if hit_or_stay in ["hit", "stay"]:
+                break
+
+            print("Invalid respond hit or stay")
+
+        return hit_or_stay == "hit"
 
 
 if __name__ == "__main__":
@@ -35,3 +45,4 @@ if __name__ == "__main__":
 
     g1.place_bet()
     print(g1.player.balance)
+    print(g1.get_player_hit_or_stay())

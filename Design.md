@@ -92,7 +92,9 @@
         - respond input not valid if the respond is not (hit or stay)
         - return true if the respond is hit
     - deal_starting_cards
-        - 
+        - create deal two cards and put it into Hand class
+        - set one of the dealre's hand card to unknown
+        - print the dealer and the player's card
     - player_turn
     - dealer_turn
     - handle_blackjack

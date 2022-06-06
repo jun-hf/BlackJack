@@ -10,7 +10,7 @@ class Game:
         self.player = player
         self.dealer = dealer
         self.bet = None
-        self.bet = Deck()
+        self.deck = Deck()
         
     def place_bet(self):
         while True:
@@ -37,7 +37,12 @@ class Game:
         return hit_or_stay == "hit"
     
     def deal_starting_cards(self):
-        pass
+        self.player.hand = Hand(self.deck.deal(2))
+        self.dealer.hand = Hand(self.deck.deal(2))
+        self.dealer.hand.cards[1].hidden = True
+        print(f'{self.dealer.hand.get_value()}')
+        print(f'{self.player.hand.get_value()}')
+
 
 
 if __name__ == "__main__":
@@ -46,6 +51,4 @@ if __name__ == "__main__":
 
     g1 = Game(ken, ali)
 
-    g1.place_bet()
-    print(g1.player.balance)
-    print(g1.get_player_hit_or_stay())
+    g1.deal_starting_cards()

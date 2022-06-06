@@ -17,7 +17,7 @@ class Deck:
         
         """
         for i in range(4):
-            for j in range(1, 15):
+            for j in range(1, 14):
                 new_card = Card(i, j)
                 self.cards.append(new_card)
 
@@ -35,5 +35,4 @@ class Deck:
 
 
 if __name__ == "__main__":
-    deck_01 = Deck()
-    print(deck_01.cards[0])
+    pass

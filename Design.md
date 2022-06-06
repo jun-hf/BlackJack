@@ -96,10 +96,51 @@
         - set one of the dealre's hand card to unknown
         - print the dealer and the player's card
     - player_turn
+        - in this method, when the player's turn they get to hit or stay
+        - when they players hit and over 21 return true (lost)
+        - when players under 21 and stay return false
+        - while true to keep protmpt
+        - invoke the get_player_stay_or_hit method
+        - if is hit then we give a card to players and show the updated value
+        - if the value is > 21 return true
     - dealer_turn
+        - set the dealer's unkown card to false
+        - show the players the dealer hand
+        - as long as the dealer has less then = 16
+            - give the dealer a card
+            - print the new card
+            - add the card and show the value to the players
+        - if the value is more then 21 return true if not return false
     - handle_blackjack
+        - if the players has no black jack return false
+        - if the dealer has blackjack and u too  then return the bet and print statemewnt saying you bopth win
+        - add the player's balance times 2.5 
+        - print you win!!
+        - return true
     - reset_round
+        - create a new deck 
+        - set the player and dealer's hand to none and also the bet
     - determine_winner
+        - store the player's and dealer's value
+        - three situations
+            - you have more then dealer, you win
+            - dealer have more then you dealer win
+            - else return bet no one's win
     - confirm_start
+        - prompt the users if they want to start win the bet
     - start_round
+        - prompt to place bet
+        - deal card
+        - if blackjack return
+        - if player.turn()
+        - lost
+
+        - determine_winner()
+        - reset_round()
     - start_game
+        - as long as the player has more then the balance 0 then ask player's if they want to play
+        - if no play then tell them they left the game if how much money
+        - break the while loop
+        - start round again
+        
+        - if balance less then 0 then print the player loss the game.

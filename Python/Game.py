@@ -36,12 +36,49 @@ class Game:
 
         return hit_or_stay == "hit"
     
+    def player_turn(self):
+        while True:
+            hit = self.get_player_hit_or_stay()
+
+            if not hit:
+                break
+            
+            new_card = self.deck.deal(1)[0]
+            self.player.hit(new_card)
+
+            print("You are dealt with:" + str(new_card))
+            print("You now have:" + str(self.player.hand.get_value()))
+
+            if self.player.hand.get_value() > 21:
+                return True
+        return False
+
     def deal_starting_cards(self):
         self.player.hand = Hand(self.deck.deal(2))
         self.dealer.hand = Hand(self.deck.deal(2))
         self.dealer.hand.cards[1].hidden = True
+        print(f'Dealer:{str(self.dealer.hand)}')
+
+        print(f'Player: {self.player.hand.get_value()}, {str(self.player.hand)}')
+
+    def dealer_turn(self):
+        self.dealer.hand.cards[1].hidden = False
         print(f'{self.dealer.hand.get_value()}')
-        print(f'{self.player.hand.get_value()}')
+
+        while self.dealer.hand.get_value() <= 16:
+            new_card = self.deck.deal(1)[0]
+
+            self.dealer.hit(new_card)
+
+            print("Dealer dealt with:" + str(new_card))
+            print(f'Dealer: {self.dealer.hand.get_value()}, {str(self.dealer.hand)}')
+
+        if self.dealer.hand.get_value() > 21:
+            return True
+        
+        return False
+    
+
 
 
 
@@ -52,3 +89,8 @@ if __name__ == "__main__":
     g1 = Game(ken, ali)
 
     g1.deal_starting_cards()
+    g1.dealer_turn()
+    
+
+
+        
